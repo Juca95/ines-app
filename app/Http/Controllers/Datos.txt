@@ -1,0 +1,13 @@
+  "nombre": "Juan",
+  "ap_paterno": "Tinoco",
+  "ap_materno": "C",
+  "sexo": "1",
+  "calle": "x",
+  "interior": "1",
+  "exterior": "2",
+  "colonia": "y",
+  "cp": "77500",
+  "municipio": "1",
+  "clave": "qwerty12345601h123",
+  "curp": "qwerty12345601h123",
+  "nacimiento": "01/01/2000"

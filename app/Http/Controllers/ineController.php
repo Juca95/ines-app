@@ -25,17 +25,18 @@ class ineController extends Controller
             'nombre' => 'required|max:50',
             'ap_paterno' => 'required|max:40',
             'ap_materno' => 'required|max:40',
-            'sexo' => 'required|integer',
+            'sexo' => 'required',
             'calle' => 'required|max:30',
             'interior' => 'required|max:10',
             'exterior' => 'required|max:10',
             'colonia' => 'required|max:30',
             'cp' => 'required|max:10',
-            'municipio' => 'required|integer',
+            'municipio' => 'required',
             'clave' => 'required|min:18|max:18',
             'curp' => 'required|min:18|max:18',
-            'nacimiento' => 'required/date'
+            'nacimiento' => 'required|date_format:d/m/Y'
         ]);
+        
         echo "Validador creado\n";
         if ($validator->fails()) {
             echo "Validando\n";
@@ -47,6 +48,7 @@ class ineController extends Controller
             return response()->json($data, 400);
         }
         echo "Validado\n";
+        
         $ine = ine::create([
             'nombre' => $request->nombre,
             'ap_paterno' => $request->ap_paterno,
